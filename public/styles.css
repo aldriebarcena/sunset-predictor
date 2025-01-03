@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+input[type="decimal"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="decimal"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+.generated-text {
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.generated-text .city-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.generated-text .quality,
+.generated-text .confidence {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.generated-text .explanation {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.extra-info {
+  display: flex;
+}

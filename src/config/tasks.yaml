@@ -1,0 +1,31 @@
+scrape_weather:
+  description:
+    scrape weather parameters like cloud cover, humidity, and visibility
+    from https://api.openweathermap.org/data/2.5/weather?lat=37.338207&lon=-121.886330&appid=4d0fee9539e02322b7161db27a699838
+  expected_output:
+    'A JSON object with key weather parameters (e.g., { "cloud_cover":
+    50, "humidity": 40, "visibility": 10 }), along with additional information: time
+    of the sunset and the city name.
+
+    '
+  agent: weather_scraper
+predict_sunset:
+  description:
+    "Analyze the weather data (in JSON format) to calculate a sunset quality
+    percentage. Provide a detailed explanation and confidence level. If the sunset
+    has already occurred, output a message stating this instead of a prediction.
+
+    "
+  expected_output:
+    'A JSON object containing ID set to 1 (IMPORTANT, make sure it
+    is first so it can be tracked down), the sunset quality percentage, explanation,
+    confidence level, and city information. If the sunset has already occurred based
+    on the current time you are generated, the message "Sunset has already happened"
+    should be added onto the explanation.
+
+    '
+  agent: sunset_predictor
+variables:
+  API_KEY: "#"
+  LAT: "#"
+  LON: "#"

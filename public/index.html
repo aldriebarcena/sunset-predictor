@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunset Predictor</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+    <div class="container">
+      <h1 class="title">Sunset Predictor</h1>
+      <a href="https://www.latlong.net" target="_blank"
+        >Get your Latitude and Longitude here</a
+      >
+      <form id="locationForm">
+        <label for="latitude">Latitude:</label>
+        <input
+          type="decimal"
+          id="latitude"
+          name="latitude"
+          required
+        /><br /><br />
+        <label for="longitude">Longitude:</label>
+        <input
+          type="decimal"
+          id="longitude"
+          name="longitude"
+          required
+        /><br /><br />
+
+        <button type="submit" id="generateButton" class="button">Submit</button>
+      </form>
+      <div id="output" class="generated-text"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
